@@ -40,5 +40,10 @@ describe "LayoutLinks" do
 		click_link "Sign up now!"
 		response.should have_selector('title', :content => "Sign up")
 	end
+	
+	it "should have a User page at '/'" do
+	
+	
+	end
 
 end
