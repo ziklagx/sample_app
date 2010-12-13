@@ -29,4 +29,15 @@ RSpec.configure do |config|
 	controller.sign_in(user)
   end
   
+  def integration_sign_in(user)
+	visit signin_path
+	
+	unless user.nil?
+		fill_in :email, :with => user.email
+		fill_in :password, :with => user.password
+	end
+	
+	click_button
+  end
+  
 end
