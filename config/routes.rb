@@ -3,9 +3,9 @@ SampleApp::Application.routes.draw do
   get "sessions/new"
 
   resources :users do 
-	member do
-		get :following, :followers
-	end
+    member do
+      get :following, :followers
+    end
   end
   
   resources :sessions, :only => [:new, :create, :destroy]
